@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class='intro'>
-                <h1 id="welcome">Welcome</h1>
+                <h1 id="welcome">Welcome to my website.<br></h1>
             </div>
         </div>
     </div>
@@ -40,7 +40,8 @@
                     </div>
                     <p>Hey! I'm Gennaro Tarantino from Italy! </br>
                         I love programming, mechanical, finance <br> and learn everyday new things!
-                        <br>  This is my website and i show you <br>what i like do!</p>
+                        <br> This is my website and i show you <br>what i like do!
+                    </p>
                     <img src="/assets/img/linkdin-photo.png" alt="" style="max-width:540px;max-height:540px">
                 </div>
             </div>
@@ -80,24 +81,24 @@
 
                     <h2>Mechanical and <br> Pneumatic Technicial</h2>
                     <div>
-                    <ul>
-                        <li>Read & Write Mechanical Drawing</li>
-                        <li>Assembly and Testing Hardware</li>
-                        <li>Mechanical Service Traveler</li>
-                    </ul>
-                </div>
-                    
+                        <ul>
+                            <li>Read & Write Mechanical Drawing</li>
+                            <li>Assembly and Testing Hardware</li>
+                            <li>Mechanical Service Traveler</li>
+                        </ul>
+                    </div>
+
                     <div>
-                    <h2>Electrician and <br> Software Engineer</h2>
-                    <ul>
-                        <li>Read & Write Wiring Diagrams</li>
-                        <li>Assembly and Testing of Machinery</li>
-                        <li>Software Service Engineer:Siemens</li>
-                        <li>Tia Portal v13+</li>
-                        <li>Simotion Scout </li>
-                        <li>KOP/AWL</li>
-                    </ul>
-                </div>
+                        <h2>Electrician and <br> Software Engineer</h2>
+                        <ul>
+                            <li>Read & Write Wiring Diagrams</li>
+                            <li>Assembly and Testing of Machinery</li>
+                            <li>Software Service Engineer:Siemens</li>
+                            <li>Tia Portal v13+</li>
+                            <li>Simotion Scout </li>
+                            <li>KOP/AWL</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="section">
@@ -197,7 +198,8 @@
                     <h1 id="close">Website</h1>
                     <ul>
                         <h2>HTML/CSS - jQuery</h2>
-                        <img src="/assets/img/html-css-logo.png" alt="" style="max-width:400px;max-height:400px">
+                        <a href="https://gennarotarantino.github.io/"><img src="/assets/img/html-css-logo.png" alt=""
+                                style="max-width:400px;max-height:400px"></a>
                     </ul>
                 </div>
             </div>
@@ -252,205 +254,223 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(document).ready(function () {
-            $("#welcome").fadeIn(5000);
-            $("#panel-1").hide("fast");
-            $("#panel-2").hide("fast");
-            $("#panel-3").hide("fast");
-            $("#panel-4").hide("fast");
-            $("#panel-5").hide("fast");
-            $("#panel-6").hide("fast");
-            $(".contact").hide("fast");
+            $("#welcome").fadeIn(2000, function () {
+                $("#welcome-1").fadeIn(2000, function () {
+                    $("#welcome-2").fadeIn(2000);
+                });
 
-            if ((screen.width >= 901)) {
-                $(function () {
-                    $.scrollify({
-                        section: ".mainstyle",
-                        scrollSpeed: 2000,
+            });
+        
+
+        $("#panel-1").hide("fast");
+        $("#panel-2").hide("fast");
+        $("#panel-3").hide("fast");
+        $("#panel-4").hide("fast");
+        $("#panel-5").hide("fast");
+        $("#panel-6").hide("fast");
+        $(".contact").hide("fast");
+
+        if ((screen.width >= 901)) {
+            $(function () {
+                $.scrollify({
+                    section: ".mainstyle",
+                    scrollSpeed: 2000,
+                });
+            });
+
+            $(".page-2").click(function () {
+
+                $("#panel-1").hide("fast");
+                $("#panel-2").hide("fast");
+                $("#panel-3").hide("fast");
+                $("#panel-4").hide("fast");
+                $("#panel-5").hide("fast");
+                $("#panel-6").hide("fast");
+                $(".section-list").fadeIn("1000");
+            });
+            $(".page-3").click(function () {
+
+                $("#panel-5").hide("fast");
+                $("#panel-6").hide("fast");
+                $(".section-list").fadeIn("1000");
+            });
+
+            $("#flip-1").click(function () {
+                $(document).ready(function () {
+                    $("#panel-4").slideUp("slow");
+                    $("#panel-3").slideUp("slow");
+                    $("#panel-2").slideUp("slow", function () {
+                        $("#panel-1").slideDown("slow");
                     });
+
+                })
+            });
+            $("#flip-2").click(function () {
+
+                $(document).ready(function () {
+                    $("#panel-4").slideUp("slow");
+                    $("#panel-3").slideUp("slow");
+                    $("#panel-1").slideUp("slow", function () {
+                        $("#panel-2").slideDown("slow");
+                    });
+
+                })
+            });
+            $("#flip-3").click(function () {
+
+                $(document).ready(function () {
+                    $("#panel-4").slideUp("slow");
+                    $("#panel-1").slideUp("slow");
+                    $("#panel-2").slideUp("slow", function () {
+                        $("#panel-3").slideDown("slow");
+                    });
+
+                })
+            });
+            $("#flip-4").click(function () {
+
+                $(document).ready(function () {
+                    $("#panel-1").slideUp("slow");
+                    $("#panel-3").slideUp("slow");
+                    $("#panel-2").slideUp("slow", function () {
+                        $("#panel-4").slideDown("slow");
+                    });
+
+                })
+            });
+            $("#flip-5").click(function () {
+
+                $(document).ready(function () {
+                    $("#panel-6").slideUp("fast", function () {
+                        $("#panel-5").slideDown("slow");
+                    });
+                })
+            });
+            $("#flip-6").click(function () {
+
+                $(document).ready(function () {
+                    $("#panel-5").slideUp("fast", function () {
+                        $("#panel-6").slideDown("slow");
+                    });
+
+                })
+            });
+
+
+            $("#contact-1").click(function () {
+                $("#contact-1").fadeOut(1000, function () {
+                    $(".contact").fadeIn(2000);
                 });
 
-                $(".page-2").click(function () {
-
-                    $("#panel-1").hide("fast");
-                    $("#panel-2").hide("fast");
-                    $("#panel-3").hide("fast");
-                    $("#panel-4").hide("fast");
-                    $("#panel-5").hide("fast");
-                    $("#panel-6").hide("fast");
-                    $(".section-list").fadeIn("1000");
+            });
+            $(".page-contact").mouseleave(function () {
+                $(".contact").fadeOut(2000, function () {
+                    $("#contact-1").fadeIn("fast");
                 });
-                $(".page-3").click(function () {
+            });
+        }
 
-                    $("#panel-5").hide("fast");
-                    $("#panel-6").hide("fast");
-                    $(".section-list").fadeIn("1000");
+        else {
+
+            $(function () {
+                $.scrollify({
+                    section: ".mainstyle",
+                    scrollSpeed: 1000,
+
                 });
+            });
 
-                $("#flip-1").click(function () {
-                    $(document).ready(function () {
+            $(".page-2").click(function () {
+
+                $("#panel-1").hide("fast");
+                $("#panel-2").hide("fast");
+                $("#panel-3").hide("fast");
+                $("#panel-4").hide("fast");
+                $(".section-list").fadeIn("1000");
+            });
+            $(".page-3").click(function () {
+                $("#panel-5").hide("fast");
+                $("#panel-6").hide("fast");
+                $(".section-list").fadeIn("1000");
+            });
+
+            $("#flip-1").click(function () {
+                $(document).ready(function () {
+                    $(".section-list").hide("1000", function () {
                         $("#panel-4").hide("slow");
                         $("#panel-3").hide("slow");
                         $("#panel-2").hide("slow");
                         $("#panel-1").fadeIn("slow");
-                    })
-                });
-                $("#flip-2").click(function () {
+                    });
 
-                    $(document).ready(function () {
+                })
+            });
+            $("#flip-2").click(function () {
+
+                $(document).ready(function () {
+                    $(".section-list").hide("1000", function () {
                         $("#panel-4").hide("slow");
                         $("#panel-3").hide("slow");
                         $("#panel-1").hide("slow");
                         $("#panel-2").fadeIn("slow");
-                    })
-                });
-                $("#flip-3").click(function () {
+                    });
+                })
+            });
+            $("#flip-3").click(function () {
 
-                    $(document).ready(function () {
+                $(document).ready(function () {
+                    $(".section-list").hide("1000", function () {
                         $("#panel-4").hide("slow");
                         $("#panel-1").hide("slow");
                         $("#panel-2").hide("slow");
                         $("#panel-3").fadeIn("slow");
-                    })
-                });
-                $("#flip-4").click(function () {
+                    });
+                })
+            });
+            $("#flip-4").click(function () {
 
-                    $(document).ready(function () {
+                $(document).ready(function () {
+                    $(".section-list").hide("1000", function () {
                         $("#panel-1").hide("slow");
                         $("#panel-3").hide("slow");
                         $("#panel-2").hide("slow");
                         $("#panel-4").fadeIn("slow");
-                    })
-                });
-                $("#flip-5").click(function () {
+                    });
+                })
+            });
+            $("#flip-5").click(function () {
 
-                    $(document).ready(function () {
+                $(document).ready(function () {
+                    $(".section-list").hide("1000", function () {
                         $("#panel-6").hide("fast");
                         $("#panel-5").fadeIn("slow");
-                    })
-                });
-                $("#flip-6").click(function () {
+                    });
+                })
+            });
+            $("#flip-6").click(function () {
 
-                    $(document).ready(function () {
+                $(document).ready(function () {
+                    $(".section-list").hide("1000", function () {
                         $("#panel-5").hide("fast");
                         $("#panel-6").fadeIn("slow");
-                    })
-                });
-
-
-                $("#contact-1").click(function () {
-                    $("#contact-1").fadeOut(1000, function () {
-                        $(".contact").fadeIn(2000);
                     });
+                })
+            });
 
-                });
-                $(".page-contact").mouseleave(function () {
-                    $(".contact").fadeOut(2000, function () {
-                        $("#contact-1").fadeIn("fast");
-                    });
-                });
-            }
 
-            else {
-
-                $(function () {
-                    $.scrollify({
-                        section: ".mainstyle",
-                        scrollSpeed: 1000,
-
-                    });
+            $("#contact-1").click(function () {
+                $("#contact-1").fadeOut(1000, function () {
+                    $(".contact").fadeIn(2000);
                 });
 
-                $(".page-2").click(function () {
-
-                    $("#panel-1").hide("fast");
-                    $("#panel-2").hide("fast");
-                    $("#panel-3").hide("fast");
-                    $("#panel-4").hide("fast");
-                    $(".section-list").fadeIn("1000");
+            });
+            $(".page-contact").mouseleave(function () {
+                $(".contact").fadeOut(2000, function () {
+                    $("#contact-1").fadeIn("fast");
                 });
-                $(".page-3").click(function () {
-                    $("#panel-5").hide("fast");
-                    $("#panel-6").hide("fast");
-                    $(".section-list").fadeIn("1000");
-                });
+            });
 
-                $("#flip-1").click(function () {
-                    $(document).ready(function () {
-                        $(".section-list").hide("1000", function () {
-                            $("#panel-4").hide("slow");
-                            $("#panel-3").hide("slow");
-                            $("#panel-2").hide("slow");
-                            $("#panel-1").fadeIn("slow");
-                        });
-
-                    })
-                });
-                $("#flip-2").click(function () {
-
-                    $(document).ready(function () {
-                        $(".section-list").hide("1000", function () {
-                            $("#panel-4").hide("slow");
-                            $("#panel-3").hide("slow");
-                            $("#panel-1").hide("slow");
-                            $("#panel-2").fadeIn("slow");
-                        });
-                    })
-                });
-                $("#flip-3").click(function () {
-
-                    $(document).ready(function () {
-                        $(".section-list").hide("1000", function () {
-                            $("#panel-4").hide("slow");
-                            $("#panel-1").hide("slow");
-                            $("#panel-2").hide("slow");
-                            $("#panel-3").fadeIn("slow");
-                        });
-                    })
-                });
-                $("#flip-4").click(function () {
-
-                    $(document).ready(function () {
-                        $(".section-list").hide("1000", function () {
-                            $("#panel-1").hide("slow");
-                            $("#panel-3").hide("slow");
-                            $("#panel-2").hide("slow");
-                            $("#panel-4").fadeIn("slow");
-                        });
-                    })
-                });
-                $("#flip-5").click(function () {
-
-                    $(document).ready(function () {
-                        $(".section-list").hide("1000", function () {
-                            $("#panel-6").hide("fast");
-                            $("#panel-5").fadeIn("slow");
-                        });
-                    })
-                });
-                $("#flip-6").click(function () {
-
-                    $(document).ready(function () {
-                        $(".section-list").hide("1000", function () {
-                            $("#panel-5").hide("fast");
-                            $("#panel-6").fadeIn("slow");
-                        });
-                    })
-                });
-
-
-                $("#contact-1").click(function () {
-                    $("#contact-1").fadeOut(1000, function () {
-                        $(".contact").fadeIn(2000);
-                    });
-
-                });
-                $(".page-contact").mouseleave(function () {
-                    $(".contact").fadeOut(2000, function () {
-                        $("#contact-1").fadeIn("fast");
-                    });
-                });
-
-            }
+        }
         });
     </script>
 

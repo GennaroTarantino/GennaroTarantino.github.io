@@ -54,14 +54,14 @@
  }
 
  .page {
-    background-image: url("/assets/img/intro-metal.jpg");
+    background-image: url("/assets/img/home-orange.jpg");
     width: 100%;
     height: 100%;
     display: block;
     background-size: 1920px 1280px;
     align-items: center;
 }
-.intro {
+.page .intro  {
     display: flex;
     width: 100%;
     height: 100%;
@@ -79,22 +79,23 @@
 
 }
 .page-1 {
-    background-image: url("/assets/img/lightining-dark.jpg");
+    background-image: url("/assets/img/profile-orange.jpg");
     width: 100%;
     height: 100%;
     display: flex;
     background-size: 1920px 1280px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    background-position: 50%;
 }
-.page-1 section {
+.page-1 .section {
     background-color: black;
-    opacity: 80%;
+    opacity: 90%;
     height: 100%;
 
 }
 .page-2 {
-    background-image: url("/assets/img/metal-floor-big.jpg");
+    background-image: url("/assets/img/skill-orange.jpg");
     width: 100%;
     height: 100%;
     display: flex;
@@ -112,7 +113,7 @@
 }
 
 .page-3 {
-    background-image: url("/assets/img/gear-index-medium.jpg");
+    background-image: url("/assets/img/project-orange.jpg");
     width: 100%;
     height: 100%;
     display: flex;
@@ -210,13 +211,13 @@
 .section-skill h2{
     text-align: center;
 }
- .contact {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
- }
 
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
  .information {
      position: relative;
      bottom: -100px;
