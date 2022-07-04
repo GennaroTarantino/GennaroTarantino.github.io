@@ -47,9 +47,11 @@
 
  nav a {
      display: flex;
+     justify-content: flex-start;
      align-items: right;
-     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-     color: gray;
+     flex-direction: column;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     color: burlywood;
      text-decoration: none;
  }
 
@@ -146,12 +148,13 @@
 
 }
 
-.page-contact .intro h1 {
+.page-contact .intro h1:hover {
     color: black;
     font-weight: 300;
     font-size: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     opacity: 100%;
+    color: orange;
 }
 
  .section {
@@ -256,6 +259,21 @@
  .form label {
      color: aliceblue;
  }
+ h2:hover {
+    color: orange;
+  }
 
-@media only screen and (max-width: 700px) {}
-@media only screen and (min-width: 701px) {}
+
+@media only screen and (max-width: 1000px) {
+    .page-1 {
+        justify-content: center;
+  
+    }
+    .mainstyle{
+        
+        height: 1000px;
+        width: auto;
+    }
+
+}
+@media only screen and (min-width: 1001px) {}

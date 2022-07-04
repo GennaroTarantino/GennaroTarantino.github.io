@@ -19,10 +19,11 @@
                         <a href="">Gennaro Tarantino</a>
                         <a href=""></a>
                         <a href=""></a>
-                        <a href='#about'>About</a>
-                        <a href='#skill'>Skill</a>
-                        <a href='#portfolio'>Portfolio</a>
-                        <a href='#contact-1'>Contact</a>
+                        <a href='#contact-1'></a>
+                        <a href='#about'></a>
+                        <a href='#skill'></a>
+                        <a href='#portfolio'></a>
+                        
                     </nav>
                 </div>
             </div>
@@ -39,7 +40,7 @@
                         <h2>About Me</h2>
                     </div>
                     <p>Hey! I'm Gennaro Tarantino from Italy! </br>
-                        I love programming, mechanical, finance <br> and learn everyday new things!
+                        I love <strong>programming</strong> , <strong>mechanical</strong> , <strong>finance</strong> <br> and learn everyday new things!
                         <br> This is my website and i show you <br>what i like do!
                     </p>
                     <img src="/assets/img/linkdin-photo.png" alt="" style="max-width:540px;max-height:540px">
@@ -82,21 +83,23 @@
                     <h2>Mechanical and <br> Pneumatic Technicial</h2>
                     <div>
                         <ul>
-                            <li>Read & Write Mechanical Drawing</li>
-                            <li>Assembly and Testing Hardware</li>
                             <li>Mechanical Service Traveler</li>
+                            <li>Read & Write Mechanical Drawing</li>
+                            <li>Process Paper Engineer</li>
                         </ul>
                     </div>
 
                     <div>
                         <h2>Electrician and <br> Software Engineer</h2>
                         <ul>
-                            <li>Read & Write Wiring Diagrams</li>
-                            <li>Assembly and Testing of Machinery</li>
                             <li>Software Service Engineer:Siemens</li>
                             <li>Tia Portal v13+</li>
                             <li>Simotion Scout </li>
                             <li>KOP/AWL</li>
+                            <br>
+                            <li>Read & Write Wiring Diagrams</li>
+                            <li>Assembly and Testing of Machinery</li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -157,10 +160,7 @@
                         <img src="/assets/img/my-travel-expirience.jpg" alt="" style="max-width:400px;max-height:400px">
                     </ul>
                 </div>
-
             </div>
-
-
         </div>
     </div>
     <div class='mainstyle'>
@@ -198,7 +198,7 @@
                     <h1 id="close">Website</h1>
                     <ul>
                         <h2>HTML/CSS - jQuery</h2>
-                        <a href="https://gennarotarantino.github.io/"><img src="/assets/img/html-css-logo.png" alt=""
+                        <a href="https://github.com/GennaroTarantino/GennaroTarantino.github.io/"><img src="/assets/img/html-css-logo.png" alt=""
                                 style="max-width:400px;max-height:400px"></a>
                     </ul>
                 </div>
@@ -233,7 +233,7 @@
                     </form>
                     <div class="information">
                         <nav>
-                            <a href='+39 3498231618'><img src="/assets/img/whatsapp-logo.png"
+                            <a href='https://github.com/GennaroTarantino'><img src="/assets/img/github.png"
                                     style="max-width:40px;max-height:40px"></a>
                             <a href=''>+39 3498231618</a>
                             <a href="https://www.linkedin.com/in/gennarotarantino"><img
@@ -270,7 +270,7 @@
         $("#panel-6").hide("fast");
         $(".contact").hide("fast");
 
-        if ((screen.width >= 901)) {
+        if ((screen.width >= 1001)) {
             $(function () {
                 $.scrollify({
                     section: ".mainstyle",
@@ -300,7 +300,7 @@
                     $("#panel-4").slideUp("slow");
                     $("#panel-3").slideUp("slow");
                     $("#panel-2").slideUp("slow", function () {
-                        $("#panel-1").slideDown("slow");
+                        $("#panel-1").slideToggle("slow");
                     });
 
                 })
@@ -311,7 +311,7 @@
                     $("#panel-4").slideUp("slow");
                     $("#panel-3").slideUp("slow");
                     $("#panel-1").slideUp("slow", function () {
-                        $("#panel-2").slideDown("slow");
+                        $("#panel-2").slideToggle("slow");
                     });
 
                 })
@@ -322,18 +322,17 @@
                     $("#panel-4").slideUp("slow");
                     $("#panel-1").slideUp("slow");
                     $("#panel-2").slideUp("slow", function () {
-                        $("#panel-3").slideDown("slow");
+                        $("#panel-3").slideToggle("slow");
                     });
 
                 })
             });
             $("#flip-4").click(function () {
-
                 $(document).ready(function () {
                     $("#panel-1").slideUp("slow");
                     $("#panel-3").slideUp("slow");
                     $("#panel-2").slideUp("slow", function () {
-                        $("#panel-4").slideDown("slow");
+                        $("#panel-4").slideToggle("slow");
                     });
 
                 })
@@ -342,7 +341,7 @@
 
                 $(document).ready(function () {
                     $("#panel-6").slideUp("fast", function () {
-                        $("#panel-5").slideDown("slow");
+                        $("#panel-5").slideToggle("slow");
                     });
                 })
             });
@@ -350,7 +349,7 @@
 
                 $(document).ready(function () {
                     $("#panel-5").slideUp("fast", function () {
-                        $("#panel-6").slideDown("slow");
+                        $("#panel-6").slideToggle("slow");
                     });
 
                 })
@@ -372,13 +371,7 @@
 
         else {
 
-            $(function () {
-                $.scrollify({
-                    section: ".mainstyle",
-                    scrollSpeed: 1000,
 
-                });
-            });
 
             $(".page-2").click(function () {
 
