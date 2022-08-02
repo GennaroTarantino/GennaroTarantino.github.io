@@ -7,7 +7,7 @@
 
 
 <head>
-    <title>My website</title>
+    <title>Gennaro Tarantino</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <link rel="icon" href="/assets/img/orange-ico.ico">
 </head>
@@ -25,7 +25,7 @@
                         <a href='#about'></a>
                         <a href='#skill'></a>
                         <a href='#portfolio'></a>
-                        
+
                     </nav>
                 </div>
             </div>
@@ -42,7 +42,8 @@
                         <h2>About Me</h2>
                     </div>
                     <p>Hey! I'm Gennaro Tarantino from Italy! </br>
-                        I love <strong>programming</strong> , <strong>mechanical</strong> , <strong>finance</strong> <br> and learn everyday new things!
+                        I love <strong>programming</strong> , <strong>mechanical</strong> , <strong>finance</strong>
+                        <br> and learn everyday new things!
                         <br> This is my website and i show you <br>what i like do!
                     </p>
                     <img src="/assets/img/linkdin-photo.png" alt="" style="max-width:540px;max-height:540px">
@@ -55,7 +56,7 @@
             <div class='section '>
                 <div class="section-list" id="list-1">
                     <div>
-                        <h1>Skill</h1>
+                        <h1>Skills</h1>
                     </div>
                     <ul>
                         <li>
@@ -79,7 +80,7 @@
             <div class="section">
                 <div class="section-skill" id="panel-1">
                     <div>
-                        <h1 id="close">Industry</h1>
+                        <h1 id="close">Industry Skills</h1>
                     </div>
 
                     <h2>Mechanical and <br> Pneumatic Technicial</h2>
@@ -101,14 +102,14 @@
                             <br>
                             <li>Read & Write Wiring Diagrams</li>
                             <li>Assembly and Testing of Machinery</li>
-                           
+
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="section">
                 <div class="section-skill" id="panel-2">
-                    <h1 id="close">Finance</h1>
+                    <h1 id="close">Finance Skills</h1>
                     <h2> Retail Trader <br> Developer Metadata</h2>
                     <ul>
                         <li>Traditional Finance</li>
@@ -126,7 +127,7 @@
             </div>
             <div class="section ">
                 <div class=" section-skill" id="panel-3">
-                    <h1 id="close">Digital</h1>
+                    <h1 id="close">Web Digital Skills</h1>
                     <h2>Full Stack Developer</h2>
                     <ul>
                         <li>HTML/CSS</li>
@@ -148,7 +149,7 @@
             </div>
             <div class="section ">
                 <div class="section-skill" id="panel-4">
-                    <h1 id="close">Comunication</h1>
+                    <h1 id="close">Comunication Skills</h1>
                     <ul>
                         <h2>Language</h2>
                         <ul>
@@ -200,8 +201,8 @@
                     <h1 id="close">Website</h1>
                     <ul>
                         <h2>HTML/CSS - jQuery</h2>
-                        <a href="https://github.com/GennaroTarantino/GennaroTarantino.github.io/"><img src="/assets/img/html-css-logo.png" alt=""
-                                style="max-width:400px;max-height:400px"></a>
+                        <a href="https://github.com/GennaroTarantino/GennaroTarantino.github.io/"><img
+                                src="/assets/img/html-css-logo.png" alt="" style="max-width:400px;max-height:400px"></a>
                     </ul>
                 </div>
             </div>
@@ -235,10 +236,10 @@
                     </form>
                     <div class="information">
                         <nav>
-                            <a href='https://github.com/GennaroTarantino'><img src="/assets/img/github.png"
-                                    style="max-width:40px;max-height:40px"></a>
+                            <a href='https://github.com/GennaroTarantino' target="_blank"><img src="/assets/img/github.png"
+                                    style="max-width:40px;max-height:40px" ></a>
                             <a href=''>+39 3498231618</a>
-                            <a href="https://www.linkedin.com/in/gennarotarantino"><img
+                            <a href="https://www.linkedin.com/in/gennarotarantino" target="_blank"><img
                                     src="/assets/img/contact-linkdn-ico.png" alt=""
                                     style="max-width:64px;max-height:64px"></a>
                         </nav>
@@ -262,210 +263,216 @@
                 });
 
             });
-        
 
-        $("#panel-1").hide("fast");
-        $("#panel-2").hide("fast");
-        $("#panel-3").hide("fast");
-        $("#panel-4").hide("fast");
-        $("#panel-5").hide("fast");
-        $("#panel-6").hide("fast");
-        $(".contact").hide("fast");
-
-        if ((screen.width >= 1001)) {
-            $(function () {
-                $.scrollify({
-                    section: ".mainstyle",
-                    scrollSpeed: 2000,
+            $("#portfolio").mouseleave(function () {
+                $(".section-skill").slideUp(2000, function () {
+                    $(".section-list").fadeIn("fast");
                 });
             });
 
-            $(".page-2").click(function () {
+            $("#panel-1").hide("fast");
+            $("#panel-2").hide("fast");
+            $("#panel-3").hide("fast");
+            $("#panel-4").hide("fast");
+            $("#panel-5").hide("fast");
+            $("#panel-6").hide("fast");
+            $(".contact").hide("fast");
 
-                $("#panel-1").hide("fast");
-                $("#panel-2").hide("fast");
-                $("#panel-3").hide("fast");
-                $("#panel-4").hide("fast");
-                $("#panel-5").hide("fast");
-                $("#panel-6").hide("fast");
-                $(".section-list").fadeIn("1000");
-            });
-            $(".page-3").click(function () {
-
-                $("#panel-5").hide("fast");
-                $("#panel-6").hide("fast");
-                $(".section-list").fadeIn("1000");
-            });
-
-            $("#flip-1").click(function () {
-                $(document).ready(function () {
-                    $("#panel-4").slideUp("slow");
-                    $("#panel-3").slideUp("slow");
-                    $("#panel-2").slideUp("slow", function () {
-                        $("#panel-1").slideToggle("slow");
+            if ((screen.width >= 1001)) {
+                $(function () {
+                    $.scrollify({
+                        section: ".mainstyle",
+                        scrollSpeed: 2000,
                     });
-
-                })
-            });
-            $("#flip-2").click(function () {
-
-                $(document).ready(function () {
-                    $("#panel-4").slideUp("slow");
-                    $("#panel-3").slideUp("slow");
-                    $("#panel-1").slideUp("slow", function () {
-                        $("#panel-2").slideToggle("slow");
-                    });
-
-                })
-            });
-            $("#flip-3").click(function () {
-
-                $(document).ready(function () {
-                    $("#panel-4").slideUp("slow");
-                    $("#panel-1").slideUp("slow");
-                    $("#panel-2").slideUp("slow", function () {
-                        $("#panel-3").slideToggle("slow");
-                    });
-
-                })
-            });
-            $("#flip-4").click(function () {
-                $(document).ready(function () {
-                    $("#panel-1").slideUp("slow");
-                    $("#panel-3").slideUp("slow");
-                    $("#panel-2").slideUp("slow", function () {
-                        $("#panel-4").slideToggle("slow");
-                    });
-
-                })
-            });
-            $("#flip-5").click(function () {
-
-                $(document).ready(function () {
-                    $("#panel-6").slideUp("fast", function () {
-                        $("#panel-5").slideToggle("slow");
-                    });
-                })
-            });
-            $("#flip-6").click(function () {
-
-                $(document).ready(function () {
-                    $("#panel-5").slideUp("fast", function () {
-                        $("#panel-6").slideToggle("slow");
-                    });
-
-                })
-            });
-
-
-            $("#contact-1").click(function () {
-                $("#contact-1").fadeOut(1000, function () {
-                    $(".contact").fadeIn(2000);
                 });
 
-            });
-            $(".page-contact").mouseleave(function () {
-                $(".contact").fadeOut(2000, function () {
-                    $("#contact-1").fadeIn("fast");
+                $(".page-2").click(function () {
+
+                    $("#panel-1").hide("fast");
+                    $("#panel-2").hide("fast");
+                    $("#panel-3").hide("fast");
+                    $("#panel-4").hide("fast");
+                    $("#panel-5").hide("fast");
+                    $("#panel-6").hide("fast");
+                    $(".section-list").fadeIn("1000");
                 });
-            });
-        }
+                $(".page-3").click(function () {
 
-        else {
-
-
-
-            $(".page-2").click(function () {
-
-                $("#panel-1").hide("fast");
-                $("#panel-2").hide("fast");
-                $("#panel-3").hide("fast");
-                $("#panel-4").hide("fast");
-                $(".section-list").fadeIn("1000");
-            });
-            $(".page-3").click(function () {
-                $("#panel-5").hide("fast");
-                $("#panel-6").hide("fast");
-                $(".section-list").fadeIn("1000");
-            });
-
-            $("#flip-1").click(function () {
-                $(document).ready(function () {
-                    $(".section-list").hide("1000", function () {
-                        $("#panel-4").hide("slow");
-                        $("#panel-3").hide("slow");
-                        $("#panel-2").hide("slow");
-                        $("#panel-1").fadeIn("slow");
-                    });
-
-                })
-            });
-            $("#flip-2").click(function () {
-
-                $(document).ready(function () {
-                    $(".section-list").hide("1000", function () {
-                        $("#panel-4").hide("slow");
-                        $("#panel-3").hide("slow");
-                        $("#panel-1").hide("slow");
-                        $("#panel-2").fadeIn("slow");
-                    });
-                })
-            });
-            $("#flip-3").click(function () {
-
-                $(document).ready(function () {
-                    $(".section-list").hide("1000", function () {
-                        $("#panel-4").hide("slow");
-                        $("#panel-1").hide("slow");
-                        $("#panel-2").hide("slow");
-                        $("#panel-3").fadeIn("slow");
-                    });
-                })
-            });
-            $("#flip-4").click(function () {
-
-                $(document).ready(function () {
-                    $(".section-list").hide("1000", function () {
-                        $("#panel-1").hide("slow");
-                        $("#panel-3").hide("slow");
-                        $("#panel-2").hide("slow");
-                        $("#panel-4").fadeIn("slow");
-                    });
-                })
-            });
-            $("#flip-5").click(function () {
-
-                $(document).ready(function () {
-                    $(".section-list").hide("1000", function () {
-                        $("#panel-6").hide("fast");
-                        $("#panel-5").fadeIn("slow");
-                    });
-                })
-            });
-            $("#flip-6").click(function () {
-
-                $(document).ready(function () {
-                    $(".section-list").hide("1000", function () {
-                        $("#panel-5").hide("fast");
-                        $("#panel-6").fadeIn("slow");
-                    });
-                })
-            });
-
-
-            $("#contact-1").click(function () {
-                $("#contact-1").fadeOut(1000, function () {
-                    $(".contact").fadeIn(2000);
+                    $("#panel-5").hide("fast");
+                    $("#panel-6").hide("fast");
+                    $(".section-list").fadeIn("1000");
                 });
 
-            });
-            $(".page-contact").mouseleave(function () {
-                $(".contact").fadeOut(2000, function () {
-                    $("#contact-1").fadeIn("fast");
-                });
-            });
+                $("#flip-1").click(function () {
+                    $(document).ready(function () {
+                        $("#panel-4").slideUp("slow");
+                        $("#panel-3").slideUp("slow");
+                        $("#panel-2").slideUp("slow", function () {
+                            $("#panel-1").slideToggle("slow");
+                        });
 
-        }
+                    })
+                });
+                $("#flip-2").click(function () {
+
+                    $(document).ready(function () {
+                        $("#panel-4").slideUp("slow");
+                        $("#panel-3").slideUp("slow");
+                        $("#panel-1").slideUp("slow", function () {
+                            $("#panel-2").slideToggle("slow");
+                        });
+
+                    })
+                });
+                $("#flip-3").click(function () {
+
+                    $(document).ready(function () {
+                        $("#panel-4").slideUp("slow");
+                        $("#panel-1").slideUp("slow");
+                        $("#panel-2").slideUp("slow", function () {
+                            $("#panel-3").slideToggle("slow");
+                        });
+
+                    })
+                });
+                $("#flip-4").click(function () {
+                    $(document).ready(function () {
+                        $("#panel-1").slideUp("slow");
+                        $("#panel-3").slideUp("slow");
+                        $("#panel-2").slideUp("slow", function () {
+                            $("#panel-4").slideToggle("slow");
+                        });
+
+                    })
+                });
+                $("#flip-5").click(function () {
+
+                    $(document).ready(function () {
+                        $("#panel-6").slideUp("fast", function () {
+                            $("#panel-5").slideToggle("slow");
+                        });
+                    })
+                });
+                $("#flip-6").click(function () {
+
+                    $(document).ready(function () {
+                        $("#panel-5").slideUp("fast", function () {
+                            $("#panel-6").slideToggle("slow");
+                        });
+
+                    })
+                });
+
+
+                $("#contact-1").click(function () {
+                    $("#contact-1").fadeOut(1000, function () {
+                        $(".contact").fadeIn(2000);
+                    });
+
+                });
+                $(".page-contact").mouseleave(function () {
+                    $(".contact").fadeOut(2000, function () {
+                        $("#contact-1").fadeIn("fast");
+                    });
+                });
+
+            }
+
+            else {
+
+
+
+                $(".page-2").click(function () {
+
+                    $("#panel-1").hide("fast");
+                    $("#panel-2").hide("fast");
+                    $("#panel-3").hide("fast");
+                    $("#panel-4").hide("fast");
+                    $(".section-list").fadeIn("1000");
+                });
+                $(".page-3").click(function () {
+                    $("#panel-5").hide("fast");
+                    $("#panel-6").hide("fast");
+                    $(".section-list").fadeIn("1000");
+                });
+
+                $("#flip-1").click(function () {
+                    $(document).ready(function () {
+                        $(".section-list").hide("1000", function () {
+                            $("#panel-4").hide("slow");
+                            $("#panel-3").hide("slow");
+                            $("#panel-2").hide("slow");
+                            $("#panel-1").fadeIn("slow");
+                        });
+
+                    })
+                });
+                $("#flip-2").click(function () {
+
+                    $(document).ready(function () {
+                        $(".section-list").hide("1000", function () {
+                            $("#panel-4").hide("slow");
+                            $("#panel-3").hide("slow");
+                            $("#panel-1").hide("slow");
+                            $("#panel-2").fadeIn("slow");
+                        });
+                    })
+                });
+                $("#flip-3").click(function () {
+
+                    $(document).ready(function () {
+                        $(".section-list").hide("1000", function () {
+                            $("#panel-4").hide("slow");
+                            $("#panel-1").hide("slow");
+                            $("#panel-2").hide("slow");
+                            $("#panel-3").fadeIn("slow");
+                        });
+                    })
+                });
+                $("#flip-4").click(function () {
+
+                    $(document).ready(function () {
+                        $(".section-list").hide("1000", function () {
+                            $("#panel-1").hide("slow");
+                            $("#panel-3").hide("slow");
+                            $("#panel-2").hide("slow");
+                            $("#panel-4").fadeIn("slow");
+                        });
+                    })
+                });
+                $("#flip-5").click(function () {
+
+                    $(document).ready(function () {
+                        $(".section-list").hide("1000", function () {
+                            $("#panel-6").hide("fast");
+                            $("#panel-5").fadeIn("slow");
+                        });
+                    })
+                });
+                $("#flip-6").click(function () {
+
+                    $(document).ready(function () {
+                        $(".section-list").hide("1000", function () {
+                            $("#panel-5").hide("fast");
+                            $("#panel-6").fadeIn("slow");
+                        });
+                    })
+                });
+
+
+                $("#contact-1").click(function () {
+                    $("#contact-1").fadeOut(1000, function () {
+                        $(".contact").fadeIn(2000);
+                    });
+
+                });
+                $(".page-contact").mouseleave(function () {
+                    $(".contact").fadeOut(2000, function () {
+                        $("#contact-1").fadeIn("fast");
+                    });
+                });
+
+            }
         });
     </script>
 
